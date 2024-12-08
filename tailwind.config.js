@@ -13,6 +13,7 @@ module.exports = {
         tertiary: "#EEED6A",
       },
       backgroundImage: {
+        "geometric-gradient": "url('/public/images/geometric-gradient.png')",
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",

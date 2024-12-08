@@ -8,7 +8,7 @@ const oswald = Oswald({ subsets: ["latin"] });
 export default function Header() {
   return (
     <header className="fixed z-10 flex bg-[#01002e] w-full h-20">
-      <div className="container flex items-center justify-between mx-auto w-full">
+      <div className="container flex items-center justify-between font-medium mx-auto w-full">
         <Link href="/" className="flex gap-4 items-center">
           <Image src={logo} width={64} height={64} alt="Logo" />
           <p
@@ -26,7 +26,12 @@ export default function Header() {
           >
             About
           </Link>
-          <p>Contact</p>
+          <Link
+            href="/Contact"
+            className="transition duration-300 hover:text-tertiary"
+          >
+            Contact
+          </Link>
         </div>
       </div>
     </header>

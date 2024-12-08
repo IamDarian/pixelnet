@@ -4,6 +4,8 @@ import HomeCard from "@/components/HomeCard";
 import CallToAction from "@/components/CallToAction";
 import Info from "@/components/Info";
 
+cards = {};
+
 export default function Home() {
   return (
     <main className="flex flex-col">
@@ -11,6 +13,7 @@ export default function Home() {
       <Presentation />
       <section className="w-full bg-[#404040] py-14">
         <div className="container mx-auto flex flex-col items-center w-full">
+          <HomeCard />
           <HomeCard />
         </div>
       </section>
