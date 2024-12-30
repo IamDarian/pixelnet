@@ -4,7 +4,7 @@ import mouse from "@/public/images/mouse.png";
 
 export default function HomeCard() {
   return (
-    <div className="border border-solid border-secondary bg-black shadow-md transition duration-300 hover:scale-[1.02] w-[450px] h-[660px]">
+    <div className="border border-solid border-secondary bg-black shadow-md transition duration-300 hover:shadow-lg max-w-[450px] max-h-[660px] md:mx-0 mx-4">
       <Image
         src={mouse}
         className="object-cover h-2/3"
@@ -17,7 +17,7 @@ export default function HomeCard() {
           <p>|</p>
           <p>PixelNet Hub</p>
         </div>
-        <button className="bg-primary text-black py-2 px-12 mt-4">
+        <button className="bg-primary text-black border border-primary transition duration-500 hover:text-primary hover:bg-transparent py-2 px-12 mt-4 mb-7">
           Details
         </button>
       </div>

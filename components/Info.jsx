@@ -10,21 +10,27 @@ export default function Info() {
   return (
     <section className="bg-black py-14">
       <div className="container mx-auto flex justify-center">
-        <div className="flex jusify-stretch w-9/12 h-80">
-          <div className="flex flex-col items-cneter justify-center bg-[#404040] border border-solid border-secondary px-8 w-1/2">
+        <div className="flex jusify-stretch w-9/12">
+          <div className="flex flex-col items-cneter justify-center bg-[#404040] border border-solid border-secondary px-8 py-10 min-w-[280px] w-1/2">
             <h3 className={`${oswald.className} text-3xl font-semibold mb-2`}>
               Schedule
             </h3>
             <div className="flex items-center mb-4">
               <Image src={calendar} alt="Calendar Icon" />
               <div className="flex flex-col ml-4">
-                <p>Monday-Friday: 14:00-22:00</p>
-                <p>Saturady-Sunday: 12:00-00:00</p>
+                <p className="lg:inline flex flex-col">
+                  Monday-Friday: <span>14:00-22:00</span>
+                </p>
+                <p className="lg:inline flex flex-col">
+                  Saturady-Sunday: <span>12:00-00:00</span>
+                </p>
               </div>
             </div>
             <div className="flex items-center">
               <Image src={phone} alt="Phone Icon" />
-              <p className="ml-4">Phone for reservations: +40712 345 678</p>
+              <p className="xl:inline flex flex-col ml-4">
+                Phone for reservations: <span>+40712 345 678</span>
+              </p>
             </div>
             <h3
               className={`${oswald.className} text-3xl font-semibold mt-4 mb-2`}

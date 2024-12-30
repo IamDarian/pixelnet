@@ -14,11 +14,13 @@ export default function Title() {
       />
 
       <section className="container flex flex-col justify-center items-center gap-5 mx-auto h-lvh">
-        <h1 className={`${oswald.className} text-7xl font-semibold`}>
+        <h1
+          className={`${oswald.className} text-7xl text-center font-semibold`}
+        >
           PixelNet Hub
         </h1>
         <p className="text-lg mb-5">Explore Other Worlds</p>
-        <div className="flex flex-col justify-center items-center gap-10 text-center bg-[#000000] shadow-md px-16 py-6 w-[530px] h-96">
+        <div className="flex flex-col justify-center items-center gap-10 text-center bg-[#000000] shadow-md px-16 py-6 max-w-[530px] mx-4 h-96">
           <h2 className={`${oswald.className} text-6xl font-semibold`}>
             WELCOME
           </h2>
@@ -26,7 +28,7 @@ export default function Title() {
             Accept the challenge and higher your expectations. Visit one of our
             locations and be transferred into another dimension.
           </p>
-          <button className="bg-secondary text-black px-3 py-2">
+          <button className="bg-secondary text-black border border-transparent transition duration-300 hover:text-primary hover:bg-transparent hover:border-primary px-10 py-2">
             PLAY NOW
           </button>
         </div>

@@ -16,7 +16,7 @@ export default function Footer() {
         </div>
         <p>Contact: info.pixelnet@mysite.hub</p>
         <p>Phone: +40712 345 678</p>
-        <p className="mt-2">
+        <p className="text-center mt-2 mx-4">
           @2024 by PixelNet Hub. Proudly created by IamDarian. All rights
           reserved.
         </p>

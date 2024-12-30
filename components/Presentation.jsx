@@ -8,7 +8,9 @@ export default function Presentation() {
   return (
     <section className="flex flex-col items-center bg-black w-full py-14">
       <div className="flex flex-col items-center container mx-auto h-full w-full">
-        <h2 className={`${oswald.className} font-semibold text-4xl`}>
+        <h2
+          className={`${oswald.className} font-semibold text-4xl text-center`}
+        >
           The Story Of Our Locations
         </h2>
         <h3 className={`${oswald.className} text-2xl font-semibold pt-5`}>
@@ -36,7 +38,9 @@ export default function Presentation() {
           be full of enjoyment.
         </p>
       </div>
-      <button className="bg-tertiary text-black px-3 py-2">PLAY NOW</button>
+      <button className="bg-tertiary text-black border border-transparent transition duration-300 hover:bg-transparent hover:text-primary hover:border-primary px-10 py-2">
+        PLAY NOW
+      </button>
     </section>
   );
 }
