@@ -6,7 +6,7 @@ const oswald = Oswald({ subsets: ["latin"] });
 
 export default function Footer() {
   return (
-    <footer className="bg-[#404040] border-t border-secondary pt-8 pb-4">
+    <footer className="bg-[#404040] border-t border-secondary mt-auto pt-8 pb-4">
       <div className="container mx-auto flex flex-col items-center text-sm text-slate-400 w-full">
         <div className="flex gap-3 mb-2">
           <Image src={logo} width={32} alt="PixelNet Logo" />
