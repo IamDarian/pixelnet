@@ -11,6 +11,7 @@ export default function Title() {
         className="absolute z-[-10] overflow-hidden object-cover w-full h-lvh"
         src={background}
         alt="Background Image"
+        priority={true}
       />
 
       <section className="container flex flex-col justify-center items-center gap-5 mx-auto h-lvh">

@@ -13,7 +13,7 @@ export default function Maps(props) {
 
   return (
     <MapContainer
-      className="h-96"
+      className="h-96 z-40"
       center={[props.latitude, props.longitude]}
       zoom={16}
       scrollWheelZoom={false}

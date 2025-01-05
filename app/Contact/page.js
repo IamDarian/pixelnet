@@ -21,7 +21,7 @@ export default function Contact() {
   return (
     <main className="flex flex-col justify-center bg-black w-full">
       <section className="container flex flex-col justify-center mx-auto mt-24 mb-16">
-        <div className="flex items-center justify-between">
+        <div className="flex md:flex-row flex-col md:gap-0 gap-12 items-center justify-between">
           <div className="flex flex-col">
             <div className="flex flex-col gap-1 mb-8">
               <h2 className={`${oswald.className} font-semibold text-4xl mb-1`}>
