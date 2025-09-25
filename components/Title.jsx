@@ -1,6 +1,7 @@
 import background from "@/public/images/829364.jpg";
 import Image from "next/image";
 import { Oswald } from "next/font/google";
+import Link from "next/link";
 
 const oswald = Oswald({ subsets: ["latin"] });
 
@@ -29,9 +30,11 @@ export default function Title() {
             Accept the challenge and higher your expectations. Visit one of our
             locations and be transferred into another dimension.
           </p>
-          <button className="bg-secondary text-black border border-transparent transition duration-300 hover:text-primary hover:bg-transparent hover:border-primary px-10 py-2">
-            PLAY NOW
-          </button>
+          <Link href="/Book">
+            <button className="bg-secondary text-black border border-transparent transition duration-300 hover:text-primary hover:bg-transparent hover:border-primary px-10 py-2">
+              PLAY NOW
+            </button>
+          </Link>
         </div>
       </section>
     </>

@@ -2,12 +2,13 @@
 import { Oswald } from "next/font/google";
 import Image from "next/image";
 import { useState } from "react";
-import Maps from "@/components/Maps";
+import Maps from "@/components/Map/Maps";
 
 import phone from "@/public/svg/phone.svg";
 import location from "@/public/svg/location.svg";
 import mail from "@/public/svg/mail.svg";
 import timetable from "@/public/svg/calendar.svg";
+// import EmbededMap from "@/components/Map/EmbeddedMap";
 
 const oswald = Oswald({ subsets: ["latin"] });
 
@@ -20,7 +21,7 @@ export default function Contact() {
 
   return (
     <main className="flex flex-col justify-center bg-black w-full">
-      <section className="container flex flex-col justify-center mx-auto mt-24 mb-16">
+      <section className="container flex flex-col justify-center mx-auto mt-24 mb-16 px-4">
         <div className="flex md:flex-row flex-col md:gap-0 gap-12 items-center justify-between">
           <div className="flex flex-col">
             <div className="flex flex-col gap-1 mb-8">
@@ -71,7 +72,7 @@ export default function Contact() {
               </p>
             </div>
           </div>
-          <form className="flex flex-col gap-2">
+          <form className="flex flex-col gap-2 md:mx-0 mx-4">
             <div className="flex flex-col">
               <label>Name *</label>
               <input
@@ -119,6 +120,7 @@ export default function Contact() {
           </form>
         </div>
       </section>
+      {/* <EmbededMap /> */}
       <Maps latitude={45.6669099} longitude={25.6078415} />
     </main>
   );

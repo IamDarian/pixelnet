@@ -1,12 +1,13 @@
 import Image from "next/image";
 import figure1 from "@/public/images/figure1.png";
 import { Oswald } from "next/font/google";
+import Link from "next/link";
 
 const oswald = Oswald({ subsets: ["latin"] });
 
 export default function Presentation() {
   return (
-    <section className="flex flex-col items-center bg-black w-full py-14">
+    <section className="flex flex-col items-center bg-black w-full py-14 px-4">
       <div className="flex flex-col items-center container mx-auto h-full w-full">
         <h2
           className={`${oswald.className} font-semibold text-4xl text-center`}
@@ -38,9 +39,11 @@ export default function Presentation() {
           be full of enjoyment.
         </p>
       </div>
-      <button className="bg-tertiary text-black border border-transparent transition duration-300 hover:bg-transparent hover:text-primary hover:border-primary px-10 py-2">
-        PLAY NOW
-      </button>
+      <Link href="/Book">
+        <button className="bg-tertiary text-black border border-transparent transition duration-300 hover:bg-transparent hover:text-primary hover:border-primary px-10 py-2">
+          PLAY NOW
+        </button>
+      </Link>
     </section>
   );
 }

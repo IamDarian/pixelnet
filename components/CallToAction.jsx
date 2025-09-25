@@ -4,7 +4,7 @@ const oswald = Oswald({ subsets: ["latin"] });
 
 export default function CallToAction() {
   return (
-    <section className="bg-black py-14">
+    <section className="bg-black py-14 px-4">
       <div className="container mx-auto flex flex-col gap-5 items-center w-full">
         <h2 className={`${oswald.className} text-5xl font-semibold`}>
           Join the Club

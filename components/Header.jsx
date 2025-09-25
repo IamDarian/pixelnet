@@ -16,11 +16,11 @@ export default function Header() {
   const path = usePathname();
 
   return (
-    <header className="fixed z-50 flex bg-[#00023b] w-full h-20">
+    <header className="fixed z-50 flex bg-[#00023b] w-full h-20 px-4">
       <div className="container flex items-center justify-between font-medium mx-auto w-full">
         <Link
           href="/"
-          className="flex gap-4 items-center sm:ml-0 ml-4"
+          className="flex gap-4 items-center sm:ml-0"
           onClick={() => setLine(0)}
         >
           <Image src={logo} width={64} height={64} alt="Logo" />
@@ -30,17 +30,31 @@ export default function Header() {
             PixelNet Hub
           </p>
         </Link>
-        <div className=" md:hidden flex sm:mr-0 mr-4">
+        <div className="md:hidden flex sm:mr-0">
           {menuOpen ? (
             <div className="absolute z-50 top-0 left-0 flex flex-col items-center bg-[#00023b] w-screen h-dvh">
-              <Image
-                src={close}
-                alt="Close icon"
-                width={64}
-                height={64}
-                className="self-end mt-4 mr-4"
-                onClick={() => setMenuOpen(false)}
-              />
+              <div className="flex justify-between w-full pt-2">
+                <Link
+                  href="/"
+                  className="flex gap-4 items-center sm:ml-0 ml-4"
+                  onClick={() => setLine(0)}
+                >
+                  <Image src={logo} width={64} height={64} alt="Logo" />
+                  <p
+                    className={`${oswald.className} text-3xl font-medium underline transition duration-300 hover:text-tertiary`}
+                  >
+                    PixelNet Hub
+                  </p>
+                </Link>
+                <Image
+                  src={close}
+                  alt="Close icon"
+                  width={32}
+                  height={32}
+                  className="self-center mr-4"
+                  onClick={() => setMenuOpen(false)}
+                />
+              </div>
               <div className="flex flex-col items-center gap-3 text-lg border-t border-secondary w-96 mt-10">
                 <Link
                   href="/"
@@ -49,7 +63,10 @@ export default function Header() {
                       ? "transition duration-300 hover:text-tertiary border-t-4 border-primary text-secondary px-1"
                       : "transition duration-300 hover:text-tertiary px-1"
                   }
-                  onClick={() => setLine(0)}
+                  onClick={() => {
+                    setLine(0);
+                    setMenuOpen(false);
+                  }}
                 >
                   Home
                 </Link>
@@ -60,7 +77,10 @@ export default function Header() {
                       ? "transition duration-300 hover:text-tertiary border-t-4 border-primary text-secondary px-1"
                       : "transition duration-300 hover:text-tertiary px-1"
                   }
-                  onClick={() => setLine(1)}
+                  onClick={() => {
+                    setLine(1);
+                    setMenuOpen(false);
+                  }}
                 >
                   Book Online
                 </Link>
@@ -72,7 +92,10 @@ export default function Header() {
                       ? "transition duration-300 hover:text-tertiary border-t-4 border-primary text-secondary px-1"
                       : "transition duration-300 hover:text-tertiary px-1"
                   }
-                  onClick={() => setLine(3)}
+                  onClick={() => {
+                    setLine(3);
+                    setMenuOpen(false);
+                  }}
                 >
                   About
                 </Link>
@@ -83,20 +106,28 @@ export default function Header() {
                       ? "transition duration-300 hover:text-tertiary border-t-4 border-primary text-secondary px-1"
                       : "transition duration-300 hover:text-tertiary px-1"
                   }
-                  onClick={() => setLine(4)}
+                  onClick={() => {
+                    setLine(4);
+                    setMenuOpen(false);
+                  }}
                 >
                   Contact
                 </Link>
               </div>
+              <div className="flex flex-1 items-end justify-center mt-10 pb-4">
+                <p>&copy; {new Date().getFullYear()} PixelNet Hub</p>
+              </div>
             </div>
           ) : (
-            <Image
-              src={menu}
-              alt="Menu icon"
-              width={48}
-              height={48}
-              onClick={() => setMenuOpen(true)}
-            />
+            <div className="flex justify-center">
+              <Image
+                src={menu}
+                alt="Menu icon"
+                width={32}
+                height={32}
+                onClick={() => setMenuOpen(true)}
+              />
+            </div>
           )}
         </div>
         <div className="md:flex gap-10 text-lg hidden">

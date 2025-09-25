@@ -5,7 +5,6 @@ export default function Maps(props) {
   let customIcon = L.icon({
     iconUrl:
       "https://static.vecteezy.com/system/resources/previews/023/554/762/original/red-map-pointer-icon-on-a-transparent-background-free-png.png",
-
     iconSize: [45, 45],
     iconAnchor: [16, 32],
     popupAnchor: [0, -32],
