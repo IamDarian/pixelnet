@@ -1,6 +1,7 @@
 import Image from "next/image";
 import background from "@/public/images/geometric-gradient.png";
 import { Oswald } from "next/font/google";
+import Link from "next/link";
 
 const oswald = Oswald({ subsets: ["latin"] });
 
@@ -8,13 +9,13 @@ export default function About() {
   return (
     <main className="flex flex-col">
       <Image
-        className="absolute z-[-10] overflow-hidden object-cover w-full h-lvh"
+        className="absolute z-[-10] overflow-hidden md:object-cover w-full h-lvh"
         src={background}
         alt="Background Image"
       />
       <section>
         <div className="container mx-auto flex justify-center mt-20">
-          <div className="flex flex-col items-center gap-5 bg-white bg-opacity-10 backdrop-blur shadow-md w-1/2 px-12 py-10">
+          <div className="flex flex-col items-center gap-5 bg-white bg-opacity-10 backdrop-blur shadow-md overflow-hidden xl:w-1/2 w-fit px-12 py-10">
             <h1 className={`${oswald.className} text-5xl font-semibold mb-3`}>
               About PixelNet Hub
             </h1>
@@ -38,9 +39,11 @@ export default function About() {
                 If you want to learn more about our story feel free to Contact
                 Us
               </p>
-              <button className="bg-white text-black transition duration-500 border border-white hover:text-white hover:bg-black hover:bg-opacity-30 mt-5 px-12 py-2">
-                Contact Us
-              </button>
+              <Link href="/Contact">
+                <button className="bg-white text-black transition duration-500 border border-white hover:text-white hover:bg-black hover:bg-opacity-30 mt-5 px-12 py-2">
+                  Contact Us
+                </button>
+              </Link>
             </div>
           </div>
         </div>

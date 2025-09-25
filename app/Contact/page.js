@@ -22,7 +22,7 @@ export default function Contact() {
   return (
     <main className="flex flex-col justify-center bg-black w-full">
       <section className="container flex flex-col justify-center mx-auto mt-24 mb-16 px-4">
-        <div className="flex md:flex-row flex-col md:gap-0 gap-12 items-center justify-between">
+        <div className="flex lg:flex-row flex-col lg:gap-0 gap-12 items-center justify-between">
           <div className="flex flex-col">
             <div className="flex flex-col gap-1 mb-8">
               <h2 className={`${oswald.className} font-semibold text-4xl mb-1`}>
@@ -72,7 +72,7 @@ export default function Contact() {
               </p>
             </div>
           </div>
-          <form className="flex flex-col gap-2 md:mx-0 mx-4">
+          <form className="flex flex-col gap-2">
             <div className="flex flex-col">
               <label>Name *</label>
               <input
