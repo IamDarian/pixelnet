@@ -9,7 +9,7 @@ export default function About() {
   return (
     <main className="flex flex-col">
       <Image
-        className="absolute z-[-10] overflow-hidden md:object-cover w-full h-lvh"
+        className="absolute z-[-10] overflow-hidden object-cover w-full h-lvh"
         src={background}
         alt="Background Image"
       />
